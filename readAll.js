@@ -20,7 +20,7 @@ module.exports.readAll = function readAll(req, res, payload, cb) {
 
     if (payload.includeDeps === false) {
         sortedArticles = sortedArticles.map((element) => {
-            let obj = Object.assign({}, element);
+            var obj = Object.assign({}, element);
             delete obj.comments;
             return obj;   
         });
@@ -35,7 +35,7 @@ module.exports.readAll = function readAll(req, res, payload, cb) {
     	articlesResponse.meta.limit * articlesResponse.meta.page
     );
     log(file, '/api/articles/readall', payload);
-    cb(null, articles);
+    cb(null, articlesResponse);
 }
 
 function sort(payload, func) {
