@@ -11,15 +11,17 @@ const updateArticle = require('./updateArticle.js').updateArticle;
 const deleteArticle = require('./deleteArticle.js').deleteArticle;
 const createComment = require('./createComment.js').createComment;
 const deleteComment = require('./deleteComment.js').deleteComment;
+const logs = require('./logs.js').logs;
 
 const handlers = {
-	'/api/articles/readall': readAll,
-	'/api/articles/read' : read,
-	'/api/articles/create' : createArticle,
-	'/api/articles/update' : updateArticle,
-	'/api/articles/delete' : deleteArticle,
-	'/api/comments/create' : createComment,
-	'/api/comments/delete' : deleteComment
+	'/api/articles/readall'	: readAll,
+	'/api/articles/read' 	: read,
+	'/api/articles/create' 	: createArticle,
+	'/api/articles/update' 	: updateArticle,
+	'/api/articles/delete' 	: deleteArticle,
+	'/api/comments/create' 	: createComment,
+	'/api/comments/delete' 	: deleteComment,
+	'/api/logs'				: logs
 };
 
 const server = http.createServer((req, res) => {
