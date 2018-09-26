@@ -40,5 +40,5 @@ module.exports.readAll = function readAll(req, res, payload, cb) {
 
 function sort(payload, func) {
     sortedArticles.sort(func);
-    if(payload.sorter === ascOrder) sortedArticles.reverse();
+    if(payload.sorter === 'asc') sortedArticles.reverse();
 }
