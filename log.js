@@ -1,6 +1,6 @@
 const logF = require('./logfile.json');
 
-module.exports.log = function log(file, url, data) {
+module.exports.log = function log(url, data) {
     const current = new Date();
     let info = {
         date: `${new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')}`,
